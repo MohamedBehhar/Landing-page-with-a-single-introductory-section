@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+   
+}
+
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+    --Open-sans: 'Open Sans', sans-serif;
+    --poppins: 'Poppins', sans-serif;
+}
+
+/* setting background for the body */
+body{
+    height: 100vh;
+    background-image: url(/images/bg-desktop.svg);
+    background-color: var(--Violet);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* making the container center and giving it padding */
+.container{
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    min-height: 100%;
+}
+
+.logo{
+    height: 40px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* styling the main section */
+.main{
+    width: 100%;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.mockup{
+    max-width: 50%;
+    height: 100%;
+}
+
+/* styling the text section */
+.text{
+    max-width: 50%;
+    color: whitesmoke;
+    
+}
+.text h1{
+    font-family: var(--poppins);
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+.text p{
+    font-family: var(--Open-sans);
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+/* styling the button */
+button{
+    width: 160px;
+    font-family: var(--Open-sans);
+    font-size: 1rem;
+    color: var(--Violet);
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 25px;
+    padding: .8rem;
+    box-shadow: 3px 3px 8px 2px rgba(0, 0, 0, 0.575);
+    cursor: pointer;
+    transition: backgrond, color, 250ms ease-in-out ;
+}
+
+/* adding hover effect to the button */
+button:hover{
+    background: var(--Soft-Magenta);
+    color: whitesmoke;
+}
+
+.social-media{
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.7rem;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.social-media .fab{
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+.social-media .fab:hover{
+    color: var(--Soft-Magenta);
+    
+}
+
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-bottom: .5rem;
+}
+.attribution a { 
+    color: hsl(0, 0%, 73%); 
+}
+
+
+@media screen and (max-width: 960px){
+    .text h1{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 780px){
+    .main{
+        flex-direction: column;
+        text-align: center;
+    }
+    .mockup{
+        max-width: 80%;
+    }
+    .text{
+        max-width: 80%;
+    }
+    .social-media{
+        position:unset;
+    }
+}
+@media screen and (max-width: 570px){
+    .mockup{
+        max-width: 100%;
+    }
+    .text{
+        max-width: 100%;
+    }
+   
+}
+@media screen and (max-width: 375px){
+    body{
+        background-image: url(/images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
