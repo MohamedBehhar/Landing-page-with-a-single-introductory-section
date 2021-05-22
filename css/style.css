@@ -25,7 +25,7 @@ body{
 /* making the container center and giving it padding */
 .container{
     position: relative;
-    max-width: 1200px;
+    max-width: 1250px;
     margin: 0 auto;
     padding-left: 2rem;
     padding-right: 2rem;
